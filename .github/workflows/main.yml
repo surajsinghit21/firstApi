@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: checkout repo
-      uses: actions/checkou@v4
+      uses: actions/checkout@v4
 
     - name: setup .net
       uses: actions/setup-dotnet@v4
