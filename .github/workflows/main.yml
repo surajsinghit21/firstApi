@@ -21,4 +21,13 @@ jobs:
       
     - name: build
       run: dotnet build --configuration Release --no-restore
+
+    - name: test
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Publish Output
+      run: dotent publish -c Release -o output
+
+    - name: publish output
+      run: 
       
