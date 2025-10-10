@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v4 test
 
     - name: setup .net
       uses: actions/setup-dotnet@v4
