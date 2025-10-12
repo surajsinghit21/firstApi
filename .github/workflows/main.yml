@@ -3,13 +3,16 @@ name: pipeline_firstApi
 on:
   push:
     branches: [ master ]
+  
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: checkout repo
-      uses: actions/checkout@v4 test
+      uses: actions/checkout@v4
 
     - name: setup .net
       uses: actions/setup-dotnet@v4
@@ -26,8 +29,8 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 
     - name: Publish Output
-      run: dotent publish -c Release -o output
+      run: dotnet publish -c Release -o output
 
     - name: publish output
-      run: 
+      run: dotnet publish -c Release -o output
       
