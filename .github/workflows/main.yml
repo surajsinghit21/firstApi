@@ -19,6 +19,13 @@ jobs:
       with:
         dotnet-version: '8.0.x'
         
+    - name: Install Sonar Cloud
+      uses: SonarSource/sonarcloud-github-action@v2
+      with:
+        organization: surajsinghit21
+        projectkey: firstApi
+        token: ${{secrets.SONAR_CLOUD_TOKEN}}
+        
     - name: restore dep.
       run: dotnet restore
       
