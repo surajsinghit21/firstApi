@@ -26,8 +26,8 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization= surajsinghit21
-          -Dsonar.projectkey= surajsinghit21_firstApi
+          -Dsonar.organization=surajsinghit21
+          -Dsonar.projectkey=surajsinghit21_firstApi
                   
     - name: restore dep.
       run: dotnet restore
