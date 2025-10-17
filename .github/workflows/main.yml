@@ -13,9 +13,6 @@ jobs:
     steps:
     - name: checkout repo
       uses: actions/checkout@v4
-
-    - name: Test Keyword...
-      run: echo $secrets.SONAR_TOKEN
       
     - name: setup .net
       uses: actions/setup-dotnet@v4
@@ -24,11 +21,14 @@ jobs:
         
     - name: Install Sonar Cloud
       uses: SonarSource/sonarcloud-github-action@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
-        organization: surajsinghit21
-        projectkey: surajsinghit21_firstApi
-        token: ${{ secrets.SONAR_TOKEN }}
-        
+        args: >
+          -Dsonar.organization= surajsinghit21
+          -Dsonar.projectkey= surajsinghit21_firstApi
+                  
     - name: restore dep.
       run: dotnet restore
       
