@@ -17,18 +17,7 @@ jobs:
     - name: setup .net
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0.x'
-        
-    - name: Install Sonar Cloud
-      uses: SonarSource/sonarcloud-github-action@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GT_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-        args: >
-          -Dsonar.organization=surajsinghit21
-          -Dsonar.projectkey=surajsinghit21_firstApi
-          -Dsonar.cs.opencover.reportsPaths=TestResults/**/*.xml
+        dotnet-version: '8.0.x'  
                   
     - name: restore dep.
       run: dotnet restore
@@ -44,4 +33,11 @@ jobs:
 
     - name: publish output
       run: dotnet publish -c Release -o output
+
+  Test_New_Stage:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: bash_script
+      run: echo "Hi, this is 2nd stage"
       
