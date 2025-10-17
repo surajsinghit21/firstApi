@@ -27,7 +27,7 @@ jobs:
       with:
         args: >
           -Dsonar.organization=surajsinghit21
-          -Dsonar.projectkey=firstApi
+          -Dsonar.projectkey=surajsinghit21_firstApi
           -Dsonar.cs.opencover.reportsPaths=TestResults/**/*.xml
 
   build:
