@@ -9,7 +9,7 @@ on:
 
 jobs:
   Check_Leaks:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checking via GIT leaks
       uses: gitleaks/gitleaks-actions@master
