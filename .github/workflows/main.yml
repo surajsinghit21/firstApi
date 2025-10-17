@@ -26,6 +26,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
+          -X
           -Dsonar.organization=surajsinghit21
           -Dsonar.projectkey=surajsinghit21_firstApi
           -Dsonar.cs.opencover.reportsPaths=TestResults/**/*.xml
