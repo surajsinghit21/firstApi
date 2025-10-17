@@ -14,7 +14,7 @@ jobs:
     - name: checkout repo
       uses: actions/checkout@v4
 
-    - name: Test Keyword
+    - name: Test Keyword...
       uses: echo ${{ secrets.SONAR_TOKEN }}
       
     - name: setup .net
