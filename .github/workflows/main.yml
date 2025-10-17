@@ -24,7 +24,7 @@ jobs:
       with:
         organization: surajsinghit21
         projectkey: firstApi
-        token: ${{ secrets.SONAR_CLOUD_TOKEN }}
+        token: ${{ secrets.SONAR_TOKEN }}
         
     - name: restore dep.
       run: dotnet restore
