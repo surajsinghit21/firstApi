@@ -28,8 +28,8 @@ jobs:
         args: >
           -X
           -Dsonar.organization=surajsinghit21
-          -Dsonar.projectkey=surajsinghit21_firstApi
-          #-Dsonar.cs.opencover.reportsPaths=TestResults/**/*.xml
+          -Dsonar.projectKey=surajsinghit21_firstApi
+          -Dsonar.cs.opencover.reportsPaths=TestResults/**/*.xml
           -Dsonar.projectName=firstApi
           -Dsonar.sources=.
 
