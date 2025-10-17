@@ -18,7 +18,7 @@ var summaries = new[]
 {
     "Freezing", "Bracings", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
-
+string AWS_SECRET_KEY="ABCD1234SECRET";
 app.MapGet("/weatherforecast", () =>
 {
     var forecast =  Enumerable.Range(1, 5).Select(index =>
