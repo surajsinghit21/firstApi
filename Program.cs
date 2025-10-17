@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
-
+var aws_key = "khfhjkflkjfpoekr123iu343iojre";
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
