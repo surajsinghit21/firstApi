@@ -26,7 +26,7 @@ jobs:
       uses: SonarSource/sonarcloud-github-action@v2
       with:
         organization: surajsinghit21
-        projectkey: firstApi
+        projectkey: surajsinghit21_firstApi
         token: ${{ secrets.SONAR_TOKEN }}
         
     - name: restore dep.
