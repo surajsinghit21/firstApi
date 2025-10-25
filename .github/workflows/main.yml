@@ -9,7 +9,7 @@ on:
 
 jobs:
   Check_Leaks:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - name: checkout repo
       uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
           -Dsonar.sources=.
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: Check_Leaks
     steps:
     - name: checkout repo
@@ -61,7 +61,7 @@ jobs:
       run: dotnet publish -c Release -o output
 
   Test_New_Stage:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: build
     steps:
     - name: bash_script
